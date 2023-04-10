@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Account & Finance",
+        "img": "https://media.istockphoto.com/id/859196032/photo/us-dollar-bills-and-calculator.jpg?s=612x612&w=is&k=20&c=Y6HQHOvAVXE7NkeHUZAmjAk66w7BgrAGrHnpAI5o1Ns=",
+        "description": "300 Jobs Available"
+    },
+    {
+        "id": 2,
+        "name": "Creative Design",
+        "img": "https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "description": "100+ Jobs Available"
+    },
+    {
+        "id": 3,
+        "name": "Marketing & Sales",
+        "img": "https://plus.unsplash.com/premium_photo-1677939082123-414edc6aaf25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
+        "description": "150 Jobs Available"
+    },
+    {
+        "id": 4,
+        "name": "Engineering Job",
+        "img": "https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+        "description": "224 Jobs Available"
+    }
+]
