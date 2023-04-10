@@ -16,13 +16,13 @@ const SingleJob = ({job}) => {
              </div>
              <div className=' flex gap-5 py-2 items-center'>
                 <p className=' text-gray-500 flex'> 
-                <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
-                {location}</p>
-                <p className=' text-gray-500 flex'>
                 <MapPinIcon className="h-6 w-6 text-blue-500" />
+                {location}</p>
+                <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
+                <p className=' text-gray-500 flex'>
                     {salary}</p>
              </div>
-             <Link to={`/details`}>
+             <Link to={`/details/${id}`}>
              <button className='btn-secondery'>View Details</button>
              </Link>
         </div>
