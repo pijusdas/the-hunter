@@ -8,10 +8,11 @@ const Header = () => {
             <h1 className=' text-5xl font-black '>The Hunter</h1>
             <div >
                 <ul className=' md:flex justify-between  md:space-x-8'>
-                   <li> <Link>Home</Link></li>
-                   <li> <Link>Statistic</Link></li>
-                   <li> <Link>Applied Job</Link></li>
-                   <li> <Link>Blog</Link></li>                    
+                   <li> <Link to={'/'}>Home</Link></li>
+                   <li> <Link to={'/statistic'}>Statistic</Link></li>
+                   <li> <Link to={'/details'}>Job Details</Link></li>
+                   <li> <Link to={'/applied'}>Applied Job</Link></li>
+                   <li> <Link to={'/blog'}>Blog</Link></li>                    
                 </ul>
             </div>
             <button className='btn-primary'>Start Applying</button>

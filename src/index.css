@@ -6,3 +6,6 @@
 .btn-primary{
   @apply  text-white font-bold text-base bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 py-5 px-7  rounded-lg
 }
+.btn-secondery{
+  @apply  text-white font-bold text-base bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 py-3 px-7  rounded-lg
+}
