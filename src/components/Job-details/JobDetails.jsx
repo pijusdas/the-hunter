@@ -32,9 +32,13 @@ const JobDetails = () => {
 
 
     return (
-        <div className=' mt-32 my-32'>
-            <h1 className=' text-center text-lg font-bold'>Job Details</h1>
+        <div className='  '>
+            
 
+            <div className=' bg-slate-100 p-12'>
+                <h1 className='text-center text-2xl font-bold -mt-5'>Applied Jobs</h1>
+
+            </div>
             <div className='mt-32 px-20 flex gap-12'>
                 <div className='w-[70%]'>
                     <p><b>Job Description:</b> {jobDescription? jobDescription: ''}</p>
