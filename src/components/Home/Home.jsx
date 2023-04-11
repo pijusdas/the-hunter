@@ -16,6 +16,12 @@ const Home = () => {
     },[])
      
 
+    // see all data handler 
+    const allDataHandler =()=>{
+        fetch('/FeatureJob.json')
+        .then(res => res.json())
+        .then(data => setJobs(data))
+    }
 
     return (
         <>
@@ -58,7 +64,7 @@ const Home = () => {
                         }
                     </div>
                     <div className=' text-center'>
-                    <button  className='btn-primary '>See More</button>
+                    <button onClick={allDataHandler} className='btn-primary '>See More</button>
                     </div>
             </section>
         </>

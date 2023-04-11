@@ -37,26 +37,26 @@ const JobDetails = () => {
 
             <div className='mt-32 px-20 flex gap-12'>
                 <div className='w-[70%]'>
-                    <p><b>Job Description:</b> {jobDescription}</p>
+                    <p><b>Job Description:</b> {jobDescription? jobDescription: ''}</p>
 
-                    <p className=' py-6'><b>Job Responsibility: </b> {jobResponsibility}</p>
+                    <p className=' py-6'><b>Job Responsibility: </b> {jobResponsibility? jobResponsibility:''}</p>
 
-                    <p className='py-6'><b>Educational Requirements:</b> {requirements} </p>
+                    <p className='py-6'><b>Educational Requirements:</b> {requirements? requirements: ''} </p>
 
-                    <p><b>Experiences: <br /> <br /> </b> {experiences} </p>
+                    <p><b>Experiences: <br /> <br /> </b> {experiences? experiences: ''} </p>
                 </div>
                 <div className='w-[30%]'>
                     <div className=' bg-purple-100  p-4 mb-5'>
                         <h1 className=' font-bold'>Job Details</h1>
 
                         <div className=' border-t-2 border-b-2 mt-5'>
-                            <p className=' my-3'><b>Salary:</b> {salary}</p>
-                            <p className=' my-3'><b>Job TItle:</b> {jobTitle}</p>
+                            <p className=' my-3'><b>Salary:</b> {salary? salary: ''}</p>
+                            <p className=' my-3'><b>Job TItle:</b> {jobTitle? jobTitle: ''}</p>
 
                             <h1 className='mb-3  font-bold'>Contact Information</h1>
                         </div>
-                        <p className=' py-3'><b>Phone:</b> {phone} </p>
-                        <p className='py-3'><b>Email:</b>{email}</p>
+                        <p className=' py-3'><b>Phone:</b> {phone? phone: ''} </p>
+                        <p className='py-3'><b>Email:</b>{email? email: ''}</p>
                         <p><b>Address:</b>{location} </p>
                     </div>
                     <button onClick={() => datAddTobD(id)} className='btn-apply'>Apply Now</button>
