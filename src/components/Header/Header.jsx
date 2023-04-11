@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -10,7 +10,7 @@ const Header = () => {
                 <ul className=' md:flex justify-between  md:space-x-8'>
                    <li> <Link to={'/'}>Home</Link></li>
                    <li> <Link to={'/statistic'}>Statistic</Link></li>
-                   <li> <Link to={'/details'}>Job Details</Link></li>
+                   <li> <NavLink to={'/details'}>Job Details</NavLink></li>
                    <li> <Link to={'/applied'}>Applied Job</Link></li>
                    <li> <Link to={'/blog'}>Blog</Link></li>                    
                 </ul>
