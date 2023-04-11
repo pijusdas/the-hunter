@@ -33,7 +33,7 @@ const Home = () => {
                     <button className='btn-primary'>Get Started</button>
                 </div>
                 <div className=' md:h-full'>
-                    <img src="../../../images/hardy.png" alt="" />
+                    <img src="hardy.png" alt="" />
                 </div>
             </div>
 
