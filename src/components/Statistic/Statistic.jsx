@@ -17,7 +17,7 @@ const data = [
     },
     {
         name: "Assigment-2",
-        marks: 60,
+        marks: 50,
         
     },
     {
@@ -27,7 +27,7 @@ const data = [
     },
     {
         name: "Assigment-4",
-        marks: 60,
+        marks: 56,
         
     },
     {
@@ -37,7 +37,7 @@ const data = [
     },
     {
         name: "Assigment-6",
-        marks: 59,
+        marks: 49,
          
     },
     {

@@ -4,7 +4,7 @@ import { getShoppingCart } from '../../utilities/fakedb';
 import ApplyJob from '../appyJob/ApplyJob';
 
 const AppliedJobs = () => {
-
+ 
     const singlejob = useLoaderData()
     console.log(singlejob)
 
@@ -25,7 +25,11 @@ const AppliedJobs = () => {
                 <h1 className='text-center text-2xl font-bold -mt-5'>Applied Jobs</h1>
 
             </div>
-            <div className='px-12 mt-30 '>
+            <div className='px-12 mt-32 '>
+                <div className=' flex justify-end mb-9 gap-5'>
+                    <button className='btn-secondery'>Remote Option</button>
+                    <button className='btn-secondery'>On-Site Option</button>
+                </div>
                 {
                     apliedsjob.map(singlejobb => <ApplyJob
                         key={singlejobb.id}

@@ -4,7 +4,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const ApplyJob = ({ singlejobb }) => {
-    const { companyName, img, jobTitle, location, salary, vacation } = singlejobb
+    const { companyName, img, jobTitle, location, salary, vacation,id } = singlejobb
 
 
     return (
@@ -27,9 +27,9 @@ const ApplyJob = ({ singlejobb }) => {
                     </div>
                 </div>
             </div>
-            <Link to='/details'>
-                <button className='btn-secondery'>View Details</button>
-            </Link>
+            <Link to={`/details/${id}`}>
+             <button className='btn-secondery'>View Details</button>
+             </Link>
         </div>
     );
 };
