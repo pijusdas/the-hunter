@@ -1,24 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../../utilities/fakedb';
 
 const JobDetails = () => {
 
-    const [singlejob, setSinglejob] = useState({})
+    const [singlejob, setSinglejob] = useState([])
+
+
 
     const {
-        jobDescription, jobResponsibility, requirements, experiences, jobTitle, location, phone, salary, email
+        jobDescription, jobResponsibility, requirements, experiences, jobTitle, location, phone, salary, email, id
     } = singlejob
 
 
-    const id = useParams()
+
+    const idd = useParams()
     const jobb = useLoaderData()
 
-    console.log(singlejob)
-
     useEffect(() => {
-        const details = jobb.find(job => job.id == id.jobId)
+        const details = jobb.find(job => job.id == idd.jobId)
         setSinglejob(details)
     }, [])
+
+
+
+    // add id to db
+    const datAddTobD = (id) => {
+        addToDb(id)
+    }
+
+
+
     return (
         <div className=' mt-32 my-32'>
             <h1 className=' text-center text-lg font-bold'>Job Details</h1>
@@ -27,27 +39,27 @@ const JobDetails = () => {
                 <div className='w-[70%]'>
                     <p><b>Job Description:</b> {jobDescription}</p>
 
-                    <p><b>Job Responsibility: </b> {jobResponsibility}</p>
+                    <p className=' py-6'><b>Job Responsibility: </b> {jobResponsibility}</p>
 
-                    <p><b>Educational Requirements:</b> {requirements} </p>
+                    <p className='py-6'><b>Educational Requirements:</b> {requirements} </p>
 
-                    <p><b>Experiences:</b> {experiences} </p>
+                    <p><b>Experiences: <br /> <br /> </b> {experiences} </p>
                 </div>
                 <div className='w-[30%]'>
                     <div className=' bg-purple-100  p-4 mb-5'>
                         <h1 className=' font-bold'>Job Details</h1>
 
                         <div className=' border-t-2 border-b-2 mt-5'>
-                            <p className=' my-3'>Salary: {salary}</p>
-                            <p className=' my-3'>Job TItle: {jobTitle}</p>
+                            <p className=' my-3'><b>Salary:</b> {salary}</p>
+                            <p className=' my-3'><b>Job TItle:</b> {jobTitle}</p>
 
                             <h1 className='mb-3  font-bold'>Contact Information</h1>
                         </div>
-                        <p className=' py-3'>Phone: {phone} </p>
-                        <p className='py-3'>Email:{email}</p>
-                        <p>Address: {location} </p>
+                        <p className=' py-3'><b>Phone:</b> {phone} </p>
+                        <p className='py-3'><b>Email:</b>{email}</p>
+                        <p><b>Address:</b>{location} </p>
                     </div>
-                    <button className='btn-apply'>Apply Now</button>
+                    <button onClick={() => datAddTobD(id)} className='btn-apply'>Apply Now</button>
                 </div>
             </div>
         </div>
