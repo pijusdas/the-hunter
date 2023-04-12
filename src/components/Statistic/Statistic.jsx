@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { Link } from 'react-router-dom';
 import {
     AreaChart,
@@ -46,10 +46,10 @@ const data = [
 
     }
 ];
-const Statistic = () => {
+const Statistic = ( ) => {
     return (
         <div >
-            <div className=' bg-slate-100 p-12'>
+            <div  className=' bg-slate-100 p-12'>
                 <h1 className='text-center text-2xl font-bold -mt-5'>Satistic</h1>
 
             </div>

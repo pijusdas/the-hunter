@@ -63,7 +63,7 @@ const Home = () => {
                             ></SingleJob>)
                         }
                     </div>
-                    <div className=' text-center'>
+                    <div className= {`text-center ${jobs.length === 6?' hidden':'' }`}>
                     <button onClick={allDataHandler} className='btn-primary'>See More</button>
                     </div>
             </section>
