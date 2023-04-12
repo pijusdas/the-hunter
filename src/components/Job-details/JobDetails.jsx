@@ -39,8 +39,8 @@ const JobDetails = () => {
                 <h1 className='text-center text-2xl font-bold -mt-5'>Applied Jobs</h1>
 
             </div>
-            <div className='mt-32 px-20 flex gap-12'>
-                <div className='w-[70%]'>
+            <div className='mt-32 px-20 lg:flex gap-12'>
+                <div className='lg:w-[70%]'>
                     <p><b>Job Description:</b> {jobDescription? jobDescription: ''}</p>
 
                     <p className=' py-6'><b>Job Responsibility: </b> {jobResponsibility? jobResponsibility:''}</p>
@@ -49,7 +49,7 @@ const JobDetails = () => {
 
                     <p><b>Experiences: <br /> <br /> </b> {experiences? experiences: ''} </p>
                 </div>
-                <div className='w-[30%]'>
+                <div className='lg:w-[30%] sm:mt-5 '>
                     <div className=' bg-purple-100  p-4 mb-5'>
                         <h1 className=' font-bold'>Job Details</h1>
 
