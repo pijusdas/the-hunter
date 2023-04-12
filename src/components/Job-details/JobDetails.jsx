@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../../utilities/fakedb';
+import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { MapPinIcon } from '@heroicons/react/24/solid'
+import { CalendarDaysIcon } from '@heroicons/react/24/solid'
+import { PhoneIcon } from '@heroicons/react/24/solid'
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
 const JobDetails = () => {
 
@@ -54,14 +59,24 @@ const JobDetails = () => {
                         <h1 className=' font-bold'>Job Details</h1>
 
                         <div className=' border-t-2 border-b-2 mt-5'>
-                            <p className=' my-3'><b>Salary:</b> {salary? salary: ''}</p>
-                            <p className=' my-3'><b>Job TItle:</b> {jobTitle? jobTitle: ''}</p>
+                            <p className=' my-3 flex'>
+                            <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
+                                <b>Salary:</b> {salary? salary: ''}</p>
+                            <p className=' my-3 flex'>
+                            <CalendarDaysIcon className="h-6 w-6 text-blue-500" />
+                                <b>Job TItle:</b> {jobTitle? jobTitle: ''}</p>
 
                             <h1 className='mb-3  font-bold'>Contact Information</h1>
                         </div>
-                        <p className=' py-3'><b>Phone:</b> {phone? phone: ''} </p>
-                        <p className='py-3'><b>Email:</b>{email? email: ''}</p>
-                        <p><b>Address:</b>{location} </p>
+                        <p className=' py-3 flex'>
+                        <PhoneIcon className="h-6 w-6 text-blue-500" />
+                            <b>Phone:</b> {phone? phone: ''} </p>
+                        <p className='py-3'>
+                        <EnvelopeIcon className="h-6 w-6 text-blue-500" />
+                            <b>Email:</b>{email? email: ''}</p>
+                        <p className=' flex'> 
+                        <MapPinIcon className="h-6 w-6 text-blue-500" />
+                            <b>Address:</b>{location} </p>
                     </div>
                     <button onClick={() => datAddTobD(id)} className='btn-apply'>Apply Now</button>
                 </div>

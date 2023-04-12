@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
@@ -8,10 +9,10 @@ const Header = () => {
             <h1 className=' text-5xl font-black '>The Hunter</h1>
             <div >
                 <ul className=' md:flex justify-between  md:space-x-8'>
-                   <li> <Link to={'/'}>Home</Link></li>
-                   <li> <Link to={'/statistic'}>Statistic</Link></li>
-                   <li> <Link to={'/applied'}>Applied Job</Link></li>
-                   <li> <Link to={'/blog'}>Blog</Link></li>                    
+                   <li> <ActiveLink to={'/'}>Home</ActiveLink></li>
+                   <li> <ActiveLink to={'/statistic'}>Statistic</ActiveLink></li>
+                   <li> <ActiveLink to={'/applied'}>Applied Job</ActiveLink></li>
+                   <li> <ActiveLink to={'/blog'}>Blog</ActiveLink></li>                    
                 </ul>
             </div>
             <button className='btn-primary'>Start Applying</button>
