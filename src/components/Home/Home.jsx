@@ -64,7 +64,7 @@ const Home = () => {
                         }
                     </div>
                     <div className=' text-center'>
-                    <button onClick={allDataHandler} className='btn-primary '>See More</button>
+                    <button onClick={allDataHandler} className='btn-primary'>See More</button>
                     </div>
             </section>
         </>

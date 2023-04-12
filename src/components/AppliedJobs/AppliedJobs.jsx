@@ -4,17 +4,56 @@ import { getShoppingCart } from '../../utilities/fakedb';
 import ApplyJob from '../appyJob/ApplyJob';
 
 const AppliedJobs = () => {
- 
+    const [applies, setApplies] = useState()
     const singlejob = useLoaderData()
-    console.log(singlejob)
+    console.log(applies)
 
     let apliedsjob = []
     const savedId = getShoppingCart()
-    for (const id in savedId) {
+    useEffect(() => {
+        for (const id in savedId) {
 
-        const foundJob = singlejob.find(job => job.id == id);
-        if (foundJob) {
-            apliedsjob.push(foundJob)
+            const foundJob = singlejob.find(job => job.id == id);
+            if (foundJob) {
+                apliedsjob.push(foundJob)
+            }
+            if (apliedsjob) {
+
+                setApplies(apliedsjob)
+            }
+        }
+
+    }, [])
+
+    // handle remote jobs on click remote job option in applied job page
+    const handlingRemoteJob = () => {
+        const foundremote = singlejob.filter(job => job.vacation[0] == 'Remote')
+        console.log(foundremote)
+    
+        let remoteJobs = []
+        for (const idd in savedId) {
+            const handleRemot = foundremote?.find(job => job.id == idd)
+            if (handleRemot) {
+                remoteJobs.push(handleRemot)
+            }
+            if(remoteJobs){
+                setApplies(remoteJobs)
+            }
+        }
+    }
+    const handlingOnsiteJob = () => {
+        const foundOnsite = singlejob.filter(job => job.vacation[0] == 'Onsite')
+        console.log(foundOnsite)
+    
+        let OnsiteJobs = []
+        for (const idd in savedId) {
+            const handleRemot = foundOnsite?.find(job => job.id == idd)
+            if (handleRemot) {
+                OnsiteJobs.push(handleRemot)
+            }
+            if(OnsiteJobs){
+                setApplies(OnsiteJobs)
+            }
         }
     }
 
@@ -27,11 +66,11 @@ const AppliedJobs = () => {
             </div>
             <div className='px-12 mt-32 '>
                 <div className=' flex justify-end mb-9 gap-5'>
-                    <button className='btn-secondery'>Remote Option</button>
-                    <button className='btn-secondery'>On-Site Option</button>
+                    <button onClick={handlingRemoteJob} className='btn-secondery'>Remote Option</button>
+                    <button onClick={handlingOnsiteJob} className='btn-secondery'>On-Site Option</button>
                 </div>
                 {
-                    apliedsjob.map(singlejobb => <ApplyJob
+                    applies?.map(singlejobb => <ApplyJob
                         key={singlejobb.id}
                         singlejobb={singlejobb}
                     ></ApplyJob>)
