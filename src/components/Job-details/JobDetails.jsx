@@ -7,6 +7,9 @@ import { CalendarDaysIcon } from '@heroicons/react/24/solid'
 import { PhoneIcon } from '@heroicons/react/24/solid'
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const JobDetails = () => {
 
     const [singlejob, setSinglejob] = useState([])
@@ -31,7 +34,12 @@ const JobDetails = () => {
 
     // add id to db
     const datAddTobD = (id) => {
-        addToDb(id)
+        
+        if(id){
+            addToDb(id)
+            toast("Apply Succesfully!")
+        }
+        
     }
 
 
@@ -81,6 +89,7 @@ const JobDetails = () => {
                     <button onClick={() => datAddTobD(id)} className='btn-apply'>Apply Now</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
